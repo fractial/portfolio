@@ -1,6 +1,5 @@
 'use client';
 
-import { mail, username } from '@/app/page';
 import HoverCard from '@/components/ui/hover-card';
 import {
   MailIcon,
@@ -12,6 +11,7 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { mail, username } from './lib';
 
 export default function Header() {
   const [repositories, setRepositories] = useState<any | null>(null);

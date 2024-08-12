@@ -1,6 +1,6 @@
-import { username } from '@/app/page';
 import Image from 'next/image';
 import { HTMLAttributes, useEffect, useState } from 'react';
+import { username } from './lib';
 
 export default function Grid({ ...props }: HTMLAttributes<HTMLDivElement>) {
   const [user, setUser] = useState<any | null>(null);
