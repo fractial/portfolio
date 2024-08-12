@@ -1,113 +1,97 @@
-import Image from "next/image";
+'use client';
+
+import Grid from '@/components/grid';
+import Header from '@/components/header';
+import Mouse from '@/components/ui/mouse';
+import {
+  HeartFillIcon,
+  HeartIcon,
+  MarkGithubIcon,
+  TelescopeFillIcon,
+  TelescopeIcon,
+} from '@primer/octicons-react';
+import Link from 'next/link';
+import { useState } from 'react';
+
+export const username = 'fractial';
+
+// bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]
+
+// [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]
 
 export default function Home() {
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+  const [isHeartHovered, setIsHeartHovered] = useState<boolean>(false);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,#0095D580,#0095D500)] dark:bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,#806EE380,#806EE300)]">
+      <Header />
+      <section className="flex md:flex-row flex-col justify-center items-center gap-4 mx-auto px-8 max-w-4xl h-dvh">
+        <div className="flex flex-col gap-4 w-full text-center md:text-left">
+          <h1 className="font-bold text-4xl leading-tight">
+            Design, Build &<br /> Repeat
+          </h1>
+          <p className="mb-8">
+            Hello there
+            <br />I am{' '}
+            <span className="underline decoration-wavy">{username}</span>, a
+            german developer focused on everything related to javascript
+            applications.
+          </p>
+          <div className="flex md:flex-row flex-col justify-center md:justify-normal gap-4 mb-8">
+            <Link
+              href="/"
+              onMouseEnter={() => setIsHovered(true)}
+              onMouseLeave={() => setIsHovered(false)}
+              className="flex flex-1 justify-center items-center gap-2 bg-black dark:bg-white px-4 py-2 rounded-md text-nowrap text-white dark:text-black transition-colors duration-200"
+            >
+              {isHovered ? <TelescopeFillIcon /> : <TelescopeIcon />}
+              <p className="font-medium">Explore</p>
+            </Link>
+            <Link
+              href={`https://github.com/${username}`}
+              className="flex flex-1 justify-center items-center gap-2 hover:bg-black/20 dark:hover:bg-white/20 px-4 py-2 rounded-md text-nowrap transition-colors duration-200"
+            >
+              <MarkGithubIcon />
+              <p className="font-medium">View on GitHub</p>
+            </Link>
+          </div>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <svg
+          className="md:block hidden rounded-xl w-full aspect-square fill-white/80 dark:fill-black/80"
+          viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M27.142 7.54635L17.7497 2.1237C16.6668 1.49848 15.3326 1.49848 14.2497 2.1237L4.85742 7.54635C3.77452 8.17156 3.10742 9.32701 3.10742 10.5774V21.4227C3.10742 22.6732 3.77452 23.8286 4.85742 24.4538L14.2497 29.8765C15.3326 30.5017 16.6668 30.5017 17.7497 29.8765L27.142 24.4538C28.2249 23.8286 28.892 22.6732 28.892 21.4227V10.5774C28.892 9.327 28.2249 8.17156 27.142 7.54635ZM25.3906 9.99927C25.3906 9.64201 25.2 9.31139 24.8906 9.13276L16.4997 4.28827C16.1903 4.10964 15.8091 4.10964 15.4997 4.28827L6.10742 9.71092C5.79802 9.88955 5.60742 10.2197 5.60742 10.5769V21.4222C5.60742 21.7795 5.79802 22.1096 6.10742 22.2883L14.498 27.1326C15.1647 27.5175 15.998 27.0364 15.998 26.2666V16.5773C15.998 16.22 16.1886 15.8899 16.498 15.7112L24.8906 10.8658C25.2 10.6872 25.3906 10.3565 25.3906 9.99927Z"
+          />
+        </svg>
+      </section>
+      <Grid id="stack" />
+      <footer className="flex justify-between items-center mt-16 p-8 w-full">
+        <div className="flex flex-col gap-2">
+          <p>
+            Made with{' '}
+            <span
+              onMouseEnter={() => setIsHeartHovered(true)}
+              onMouseLeave={() => setIsHeartHovered(false)}
+            >
+              {isHeartHovered ? (
+                <HeartFillIcon size={18} className="animate-ping" />
+              ) : (
+                <HeartIcon size={18} />
+              )}
+            </span>{' '}
+            by TS
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          <p>&copy; 2024 Fractial</p>
+        </div>
+        <Link href={`https://github.com/${username}`}>
+          <MarkGithubIcon size={24} />
+        </Link>
+      </footer>
+      <Mouse />
     </main>
   );
 }
