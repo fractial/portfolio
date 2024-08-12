@@ -13,6 +13,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
+const mail = 'timo.staab0@gmail.com';
+
 export default function Header() {
   const [repositories, setRepositories] = useState<any | null>(null);
 
@@ -120,15 +122,15 @@ export default function Header() {
             </div>
           </Link>
         </HoverCard>
-        <HoverCard heading="Contact" href="mailto:timo.staab@outlook.com">
+        <HoverCard heading="Contact" href={`mailto:${mail}`}>
           <Link
-            href="mailto:timo.staab@outlook.com"
+            href={`mailto:${mail}`}
             className="flex items-center gap-4 hover:text-[#0095D5]"
           >
             <MailIcon size={24} />
             <div className="flex flex-col">
               <h1>Mail</h1>
-              <p className="text-sm">timo.staab@outlook.com</p>
+              <p className="text-sm">{mail}</p>
             </div>
           </Link>
         </HoverCard>

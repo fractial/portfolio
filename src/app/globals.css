@@ -50,3 +50,7 @@ body {
 .animate-linear {
   animation: linearArrow 2s infinite;
 }
+
+* {
+  scroll-behavior: smooth;
+}

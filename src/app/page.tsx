@@ -39,7 +39,7 @@ export default function Home() {
           </p>
           <div className="flex md:flex-row flex-col justify-center md:justify-normal gap-4 mb-8">
             <Link
-              href="/"
+              href="#stack"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               className="flex flex-1 justify-center items-center gap-2 bg-black dark:bg-white px-4 py-2 rounded-md text-nowrap text-white dark:text-black transition-colors duration-200"
