@@ -6,6 +6,7 @@ import Mouse from '@/components/ui/mouse';
 import {
   HeartFillIcon,
   HeartIcon,
+  MailIcon,
   MarkGithubIcon,
   TelescopeFillIcon,
   TelescopeIcon,
@@ -13,6 +14,7 @@ import {
 import Link from 'next/link';
 import { useState } from 'react';
 
+export const mail = 'timo.staab0@gmail.com';
 export const username = 'fractial';
 
 // bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]
@@ -69,7 +71,7 @@ export default function Home() {
         </svg>
       </section>
       <Grid id="stack" />
-      <footer className="flex justify-between items-center mt-16 p-8 w-full">
+      <footer className="flex justify-between items-end mt-16 p-8 w-full">
         <div className="flex flex-col gap-2">
           <p>
             Made with{' '}
@@ -87,9 +89,14 @@ export default function Home() {
           </p>
           <p>&copy; 2024 Fractial</p>
         </div>
-        <Link href={`https://github.com/${username}`}>
-          <MarkGithubIcon size={24} />
-        </Link>
+        <div className="flex justify-center items-center gap-4">
+          <Link href={`mailto:${mail}`}>
+            <MailIcon size={24} />
+          </Link>
+          <Link href={`https://github.com/${username}`}>
+            <MarkGithubIcon size={24} />
+          </Link>
+        </div>
       </footer>
       <Mouse />
     </main>

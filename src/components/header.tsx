@@ -1,6 +1,6 @@
 'use client';
 
-import { username } from '@/app/page';
+import { mail, username } from '@/app/page';
 import HoverCard from '@/components/ui/hover-card';
 import {
   MailIcon,
@@ -12,8 +12,6 @@ import {
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-
-const mail = 'timo.staab0@gmail.com';
 
 export default function Header() {
   const [repositories, setRepositories] = useState<any | null>(null);
@@ -117,7 +115,7 @@ export default function Header() {
           >
             <StackIcon size={24} />
             <div className="flex flex-col">
-              <h1>Stacked</h1>
+              <h1 className="font-semibold">Stacked</h1>
               <p className="text-sm">My tech stack</p>
             </div>
           </Link>
@@ -129,7 +127,7 @@ export default function Header() {
           >
             <MailIcon size={24} />
             <div className="flex flex-col">
-              <h1>Mail</h1>
+              <h1 className="font-semibold">Mail</h1>
               <p className="text-sm">{mail}</p>
             </div>
           </Link>

@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'Fractial',
-  description: 'My portfolio page',
+  description: 'My web developer portfolio webpage',
 };
 
 export default function RootLayout({

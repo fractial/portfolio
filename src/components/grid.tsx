@@ -46,7 +46,7 @@ export default function Grid({ ...props }: HTMLAttributes<HTMLDivElement>) {
           public repositories
         </p>
       </div>
-      <div className="*:brightness-0 gap-4 grid grid-cols-4 md:grid-cols-2 col-span-3 md:col-span-1 *:p-4 *:w-full *:aspect-square *:grayscale *:invert-0 dark:*:invert">
+      <div className="*:brightness-0 gap-4 grid grid-cols-4 md:grid-cols-2 col-span-3 md:col-span-1 md:*:p-4 *:w-full *:aspect-square *:grayscale *:invert-0 dark:*:invert">
         <Image src="/nextjs.svg" alt="nextjs" width={50} height={50} />
         <Image src="/git.svg" alt="git" width={50} height={50} />
         <Image src="/rust.svg" alt="rust" width={50} height={50} />
