@@ -32,10 +32,13 @@ export default function Grid({ ...props }: HTMLAttributes<HTMLDivElement>) {
       {...props}
     >
       <div className="col-span-3 md:col-span-2">
-        <img
+        <Image
           src={`https://github-readme-stats.vercel.app/api?username=${username}&text_color=fff&icon_color=fff&border_color=ffffff00&bg_color=ffffff00&theme=dark&hide_title=true&show_icons=true&line_height=18`}
           alt="userstats"
+          width={50}
+          height={50}
           className="w-full invert dark:invert-0"
+          unoptimized
         />
       </div>
       <div className="flex justify-between items-center col-span-3 md:col-span-1">
@@ -51,10 +54,13 @@ export default function Grid({ ...props }: HTMLAttributes<HTMLDivElement>) {
         <Image src="/figma.svg" alt="figma" width={50} height={50} />
       </div>
       <div className="col-span-3 md:col-span-2">
-        <img
+        <Image
           src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&text_color=fff&border_color=ffffff00&bg_color=ffffff00&theme=dark&hide_title=true&line_height=18`}
           alt="userstats"
+          width={50}
+          height={50}
           className="w-full invert dark:invert-0"
+          unoptimized
         />
       </div>
     </div>

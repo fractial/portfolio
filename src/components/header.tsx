@@ -50,7 +50,6 @@ export default function Header() {
       </Link>
       <div className="md:flex hidden">
         <HoverCard
-          href={`https://github.com/${username}`}
           heading={
             <>
               <p className="mr-1">Projects</p>
@@ -120,7 +119,7 @@ export default function Header() {
             </div>
           </Link>
         </HoverCard>
-        <HoverCard heading="Contact" href={`mailto:${mail}`}>
+        <HoverCard heading="Contact">
           <Link
             href={`mailto:${mail}`}
             className="flex items-center gap-4 hover:text-[#0095D5]"
