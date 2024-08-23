@@ -1,4 +1,4 @@
-import { ArrowDownIcon } from '@primer/octicons-react';
+import { ArrowLeftIcon } from '@primer/octicons-react';
 import { useEffect, useState } from 'react';
 
 export default function Mouse() {
@@ -20,11 +20,13 @@ export default function Mouse() {
 
   return (
     <div
-      className="right-0 bottom-0 z-50 fixed flex flex-col justify-center items-center gap-8 p-8 animate-linear pointer-events-none"
+      className="right-1/2 md:right-0 bottom-12 z-50 md:fixed absolute animate-[bounce_2s_infinite] pointer-events-none"
       style={{ opacity }}
     >
-      <p className="-rotate-90">Scroll down</p>
-      <ArrowDownIcon size={24} />
+      <div className="flex flex-row justify-center items-center gap-2 md:p-6 lg:p-12 w-0 -rotate-90">
+        <ArrowLeftIcon size={24} />
+        <p className="md:block hidden text-nowrap">Scroll down</p>
+      </div>
     </div>
   );
 }
