@@ -32,10 +32,8 @@ export default function Home() {
           </h1>
           <p className="mb-8">
             Hello there
-            <br />I am{' '}
-            <span className="underline decoration-wavy">{username}</span>, a
-            german developer focused on everything related to javascript
-            applications.
+            <br />I am <span className="underline">{username}</span>, a german
+            developer focused on everything related to javascript applications.
           </p>
           <div className="flex md:flex-row flex-col justify-center md:justify-normal gap-4 mb-8">
             <Link
@@ -49,6 +47,7 @@ export default function Home() {
             </Link>
             <Link
               href={`https://github.com/${username}`}
+              target="_blank"
               className="flex flex-1 justify-center items-center gap-2 hover:bg-black/20 dark:hover:bg-white/20 px-4 py-2 rounded-md text-nowrap transition-colors duration-200"
             >
               <MarkGithubIcon />
@@ -91,7 +90,7 @@ export default function Home() {
           <Link href={`mailto:${mail}`}>
             <MailIcon size={24} />
           </Link>
-          <Link href={`https://github.com/${username}`}>
+          <Link href={`https://github.com/${username}`} target="_blank">
             <MarkGithubIcon size={24} />
           </Link>
         </div>
